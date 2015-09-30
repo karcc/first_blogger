@@ -1,0 +1,15 @@
+<%= form_for(@tag) do |f| %>
+	<ul>
+		<% @tag.errors.full_messages do |error| %>
+		<li><%= error %></li>
+		<% end %>
+	</ul>
+	<p>
+		<%= f.label :tag_list %><br />
+		<%= f.text_field :tag_list %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+	<% end %>
