@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	before_filer :require_login, except: [:create]
 
 	def create
 		@comment = Comment.new(comment_params)
